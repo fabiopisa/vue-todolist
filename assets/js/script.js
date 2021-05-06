@@ -11,6 +11,7 @@ const app = new Vue({
   el:'#app',
   data:{
     alertItem:false,
+    alertNoCompleted:false,
     strTodo:'',
     todos:[
       {
@@ -33,8 +34,16 @@ const app = new Vue({
 
   },
   methods:{
-    delItem(index){
-       this.todos.splice(index,1)
+    delItem(index,todo){
+      if(todo.checked === true){
+        this.todos.splice(index,1);
+      }else{
+        this.alertNoCompleted = true,
+        setTimeout(()=>{
+          this.alertNoCompleted = false;
+        },2000);
+      }
+       
     },
     addTodo(){
       if(this.strTodo.length > 2){

@@ -21,6 +21,7 @@
       <h4 v-if="alertItem">Attenzione list item troppo corto</h4>
       <input type="text" placeholder="Nuovo Testo" v-model="strTodo" @keyup.enter="addTodo">
       <button @click="addTodo">Aggiungi</button>
+      <h4 v-if="alertNoCompleted">Attenzione list item non ancora concluso</h4>
     </div>
 
     <div class="list-todos">
@@ -33,7 +34,7 @@
         >
           {{todo.todo}}
           <i class="fas fa-times"
-          @click.stop="delItem(index)"
+          @click.stop="delItem(index,todo)"
           ></i>
         </li>
       </ul>
