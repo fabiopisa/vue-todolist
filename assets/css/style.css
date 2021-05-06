@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: skyblue;
+  text-align: center;
+}
+.container img{
+  width: 30%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.container input{
+  padding: 7px 15px;
+  width: 300px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.container button{
+  padding: 7px 15px;
+  border-radius: 7px;
+  border: none;
+  background-color: tomato;
+  color: white;
+}
+.container button:hover{
+  box-shadow: 1px 5px 10px rgba(0,0,0,0.3);
+}
+.container button:active{
+  background-color: thistle;
+}
+.input-list{
+  margin-bottom: 30px;
+}
+.input-list h4{
+  margin-bottom: 10px;
+  color: red;
+}
+ul{
+  list-style: none;
+}
+.list-todos{
+ background-color: rgb(198, 226, 255);
+ width: 50%;
+ margin: auto;
+ border-radius: 7px;
+ padding: 20px;
+ box-shadow: 1px 5px 5px rgba(0,0,0,0.3);
+}
+.list-todos ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid lightcoral;
+  cursor: pointer;
+}
+.list-todos ul li.last {
+  border: 0;
+}
+.list-todos ul li:hover{
+  background-color: rgb(247, 223, 223);
+}
+.list-todos ul li.checked{
+  color: rgb(165, 152, 152);
+  text-decoration:line-through ;
+}
+.list-todos ul li i{
+ color: lightslategray;
+ cursor: pointer;
+}
+.list-todos ul li i:hover{
+ color: maroon;
+}
