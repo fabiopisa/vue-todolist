@@ -19,7 +19,7 @@
 
     <div class="input-list">
       <h4 v-if="alertItem">Attenzione list item troppo corto</h4>
-      <input type="text" placeholder="Nuovo Testo" v-model="this.strTodo" @keyup.enter="addTodo">
+      <input type="text" placeholder="Nuovo Testo" v-model="strTodo" @keyup.enter="addTodo">
       <button @click="addTodo">Aggiungi</button>
     </div>
 

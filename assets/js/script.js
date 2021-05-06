@@ -46,7 +46,7 @@ const app = new Vue({
       }else{
         this.alertItem = true;
         setTimeout(()=>{
-          this.alertItem=false;
+          this.alertItem = false;
         },2000)
         this.strTodo='';
       }
