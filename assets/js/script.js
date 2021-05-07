@@ -46,7 +46,7 @@ const app = new Vue({
        
     },
     addTodo(){
-      if(this.strTodo.length > 2){
+      if(this.strTodo.trim().length > 2){
         this.todos.push({
           todo: this.strTodo,
           checked:false,
@@ -58,6 +58,18 @@ const app = new Vue({
           this.alertItem = false;
         },2000)
         this.strTodo='';
+      }
+    },
+    /* nell'hatml in li usavamo questo
+      :class="(todo.checked === true) ? 'checked' : null"
+      :style="(index === todos.length -1 ) ? 'border:0;': null" 
+      ora usiamo questa funzione con :class="addClasses(todo,index) in li nell'html"
+    */
+    addClasses(todo, index){
+      return{
+        //queste sono solo condizioni vere
+       'checked': todo.checked,
+       'last': index === this.todos.length -1
       }
     }
 

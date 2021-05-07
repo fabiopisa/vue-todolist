@@ -28,8 +28,7 @@
       <ul>
         <li
         v-for="(todo, index) in todos"
-        :class="(todo.checked === true) ? 'checked' : null"
-        :style="(index === todos.length -1 ) ? 'border:0;': null"
+        :class="addClasses(todo, index)"
         @click="todo.checked = !todo.checked"
         >
           {{todo.todo}}
